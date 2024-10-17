@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS Agua limpia y Saneamiento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/contactanos.css">
+    <script src="/js/donaciones.js"></script>
+    <link rel="icon" href="/img/ONU.ico">
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="/img/LOGO_ODS _06_sinFondo.png"></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="/index.html">INICIO</a></li>
+                <li><a href="/ExploraODS06.html">ODS 06</a></li>
+                <li><a href="#">AUDIOVISUAL</a></li>
+                <li><a href="#">CONTRIBUYE</a></li>
+                <li><a href="#">CONTACTANOS</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!--INICIO| EStructura para el efcto carga de la pagina-->
+    <div id="loaderCharge" class="section_loader">
+        <div class="loader">
+            <div class="content">
+                <h2>ODS06</h2>
+                <h2>ODS06</h2>
+            </div>
+        </div>
+    </div>
+    <script src="/js/efectoCarga.js"></script>
+    <!--FIN | Estructura para el efecto carga de la pagina-->
+
+    <div class="main-container">
+        <section class="partners">
+            <video src="/img/video-partners.mp4" autoplay muted loop></video>
+            <div class="contenido">
+                <h1>Contactanos<br></h1>
+            </div>
+        </section>
+
+        <div class="SegmentoPreguntasFrecuentes">
+            <div class="faq-header">Preguntas frecuentes</div>
+
+            <div class="faq-content">
+                <div class="faq-question">
+                    <input id="q1" type="checkbox" class="panel">
+                    <div class="plus">+</div>
+                    <label for="q1" class="panel-title">¿En qué consiste el Objetivo de Desarrollo Sostenible 6?</label>
+                    <div class="panel-content">En el último siglo, la demanda de agua a nivel mundial ha aumentado
+                        debido a la alta tasa de crecimiento demográfico, la rápida urbanización, el desarrollo
+                        económico y las modalidades cambiantes de consumo. Además, esta demanda se intensifica con el
+                        cambio climático y los fenómenos meteorológicos extremos que cada vez son originados con más
+                        frecuencia como sequías e inundaciones.
+
+                        Las sequias en España son un fenómeno recurrente, que, sumado a la sobreexplotación del agua de
+                        ríos y acuíferos, hacen que algunas zonas del sur y este del país presente los niveles más
+                        graves de sobreexplotación de Europa.</div>
+                </div>
+
+                <div class="faq-question">
+                    <input id="q2" type="checkbox" class="panel">
+                    <div class="plus">+</div>
+                    <label for="q2" class="panel-title">¿Cómo pueden las empresas contribuir al ODS 6?</label>
+                    <div class="panel-content">Las empresas pueden contribuir de diferentes maneras al ODS 6. Hay
+                        determinadas empresas cuyo núcleo de negocio está más directamente ligado a este Objetivo, como
+                        las del sector químico o las del sector agroalimentario. No obstante, todas las empresas,
+                        independientemente de su sector, pueden tomar medidas para contribuir a este ODS.</div>
+                </div>
+
+                <div class="faq-question">
+                    <input id="q3" type="checkbox" class="panel">
+                    <div class="plus">+</div>
+                    <label for="q3" class="panel-title">¿Qué buscan las metas del objetivo 6?</label>
+                    <div class="panel-content">El Objetivo de Desarrollo Sostenible (ODS) 6, formulado por el Grupo de
+                        Trabajo Abierto de las Naciones Unidas, plantea una misión ambiciosa, pero viable, para los dos
+                        próximos decenios: “Garantizar la disponibilidad y la gestión sostenible del agua y el
+                        saneamiento para todos”.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="containerSuggestionForm">
+            <h1>Dejanos tu sugerencia para seguir creciendo</h1>
+            <form id="suggestionForm">
+                <textarea id="suggestion" name="suggestion" required></textarea>
+                <button type="submit">Enviar Sugerencia</button>
+            </form>
+            <p class="success-message" id="successMessage">¡Gracias por tu sugerencia! La hemos recibido correctamente.
+            </p>
+        </div>
+        <div class="main-container">
+            <div class="bodyDonaciones">
+                <div class="card-form">
+                    <form class="deposit">
+                        <div class="form-indicator"></div>
+                        <div class="form-body">
+                            <div class="row">
+                                <h2>PUEDES AYUDAR DONANDO:</h2>
+                            </div>
+                            <div class="row">
+                                <p style="margin-top:0px;" id="donation">S/0 recibidos las últimas 24 horas</p>
+                            </div>
+                            <div class="row">
+                                <div class="form-block">
+                                    <div class="button" id="1" onclick="setValue(this)">S/5</div>
+                                    <div class="button" id="2" onclick="setValue(this)">S/10</div>
+                                    <div class="button" id="3" onclick="setValue(this)">S/20</div>
+                                    <div class="button" id="4" onclick="setValue(this)">S/40</div>
+                                    <div class="button" id="5" onclick="setValue(this)">S/100</div>
+                                    <div class="button" id="6" onclick="setValue(this)">S/250</div>
+                                    <div class="button" id="7" onclick="setValue(this)">S/1000</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="text" id="cc" maxlength="16" placeholder="Número de tarjeta">
+                            </div>
+                            <div class="row">
+                                <input type="text" id="date" maxlength="5" placeholder="MM/YY">
+                                <input type="text" id="cvc" maxlength="4" placeholder="CVC">
+                            </div>
+                            <div class="row">
+                                <input type="text" id="name" placeholder="Deja un bonito mensaje">
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <div class="btn" onclick="validate(this)">Realizar Donación</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="containerIntegrantes">
+            <h1>EQUIPO DE PROYECTO</h1>
+            <div class="members">
+                <div class="member">
+                    <img
+                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033344/itc-web-course-flexbox/richard.png">
+                    <h2 class="member-name">Rivas Rojas Luis Alexander</h2>
+                </div>
+                <div class="member">
+                    <img
+                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033285/itc-web-course-flexbox/dinesh.png">
+                    <h2 class="member-name">Sanchez Miranda Jesus Miguel</h2>
+                </div>
+                <div class="member">
+                    <img
+                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033357/itc-web-course-flexbox/gilfoyle.png">
+                    <h2 class="member-name">Torres Vicente Leonardo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--INICIO | Footer de ka pagina-->
+
+    <footer class="pie_pagina">
+        <div class="grupo_1">
+            <div class="box">
+                <figure>
+                    <img src="/img/logo_ecolluviaSolution_blanco.png" alt="">
+                </figure>
+            </div>
+            <div class="box">
+                <h3>Contactanos</h3>
+                <a href="#"><i class="fa-solid fa-location-dot"></i>2 de Mayo 437-247. Imperial 15701</a>
+                <a href="#"><i class="fa-solid fa-phone-volume"></i>+51 923 463 263</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>Example@gmail.com</a>
+            </div>
+            <div class="box">
+                <h3>Links Rapidos</h3>
+                <a href=""><i class="fa-solid fa-chevron-right"></i>Equipo de desarrollo</a>
+                <a href=""><i class="fa-solid fa-chevron-right"></i>Registrate</a>
+            </div>
+            <div class="box_links">
+                <h3>Siguenos en Nuestras redes</h3>
+                <div class="links_sociales">
+                    <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&hl=es-es&aa_click=8891933284028179"
+                        target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZXMiLCJteCI6IjIifQ%3D%3D%22%7D"
+                        target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/foryou?lang=es" target="_blank"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyrigtht">
+            <small>Copyrigtht &copy; 2024 <b>Valle Grande</b> - Todos los Derechos Reservados</small>
+        </div>
+    </footer>
+    <!--FIN | footer de la pagina-->
+</body>
+
+</html>
