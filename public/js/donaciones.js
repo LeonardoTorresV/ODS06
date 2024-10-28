@@ -46,7 +46,7 @@ function validate() {
     const cvc = validateCVC();
     const cc = validateCC();
     const date = validateDate();
-    const name = validateName();  
+    const name = validateName();
     const allAreValid = cvc && cc && date && name;
 
     if (allAreValid) {

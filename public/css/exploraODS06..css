@@ -103,7 +103,7 @@ header .navegacion .navegacion_links a {
     text-decoration: none;
     font-size: 1em;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 20px;
     transition: 0.2s ease;
     color: white;
     padding: 10px;
@@ -201,39 +201,95 @@ header .navegacion .navegacion_links a:hover {
     }
 }
 
-.exploraODS_06{
+/*INICIO | Estilos de la sección explora el ODS 06*/
+.container_explora {
+    margin-top: 140px;
     display: flex;
-    margin-top: 150px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.imagen_explora img{
-   width: 30em;
-   border-radius: 50%; 
+.content_image {
+    margin: 10px;
+    max-width: 500px;
 }
 
-.contendio_ODS06{
+.content_image img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.content_info {
+    margin: 10px;
+    padding: 20px;
+    max-width: 700px;
+}
+
+.content_info h2 {
     text-align: center;
-    justify-content: center;
-    margin: auto;
-}
-
-.contendio_ODS06 h2{
-    margin-top: -60px;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #0FAFD0;
-    margin-left: 40px;
+    margin-bottom: 20px;
     font-size: 2em;
+    line-height: 1.5;
+    border-bottom: 3px solid #0b7f9c;
 }
 
-.contendio_ODS06 p{
-    margin-left: 40px;
-    font-size: 20px;
-    line-height: 1.5;
+.content_info p {
+    text-align: justify;
+    line-height: 1.4;
 }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media(max-width: 930px) {
+    .container_explora {
+        display: block;
+        place-items: center;
+    }
+}
+
+@media(max-width: 431px) {
+    .info_extra {
+        display: none;
+    }
+
+    input[type="checkbox"] {
+        height: 2em;
+        display: block;
+        appearance: none;
+    }
+
+    label {
+        position: relative;
+        padding: 1em;
+        border-radius: 5px;
+        background-color: #007CC3;
+        color: white;
+        cursor: pointer;
+    }
+    label:hover{
+        background-color: #0b7f9c;
+    }
+
+
+    label:before {
+        content: 'Leer mas';
+    }
+
+    input[type="checkbox"]:checked~label::before {
+        content: 'Leer menos';
+    }
+
+    .dots:has(~ input[type="checkbox"]:checked) {
+        display: none;
+    }
+
+    .info_extra:has(~ input[type="checkbox"]:checked) {
+        display: inline;
+    }
+}
+/*FIN | Estilos de la sección explora el ODS 06*/
 
 
 /* INICIO | Efecto water wave*/
@@ -339,23 +395,31 @@ section .wave.wave3{
 /*FIN | Estilos de los Indicadores clave*/
 
 
-/*INICIO | Estlios de los retos y desafios*/
+
+/*INICIO | EStilos de la sección retos y desafios del ODS 06*/
 .titulo_retos_desafios{
-    margin-top: -40px;
+    margin-top: 40px;
     margin-bottom: 50px;
     text-align: center;
     font-size: 2em;
 }
 
-.wrapper{
+.container_retos{
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: 70%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-} 
+}
 
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
-.carta{
+.card{
+    margin: 20px;
     width: 280px;
     height: 360px;
     padding: 2rem 1rem;
@@ -366,18 +430,15 @@ section .wave.wave3{
     transition: 0.5s ease-in-out;
 }
 
-
-.carta:hover{
+.card:hover{
     transform: translateY(20px);
-
 }
 
-.carta::before{
-    content: "";
+.card:before{
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #0fb0d04a, #085d84bb);
@@ -386,11 +447,11 @@ section .wave.wave3{
     opacity: 0;
 }
 
-.carta:hover:before{
+.card:hover::before{
     opacity: 1;
 }
 
-.carta img{
+.card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -399,156 +460,167 @@ section .wave.wave3{
     left: 0;
 }
 
-.carta .info{
+.card .info{
     position: relative;
     z-index: 3;
     color: white;
     opacity: 0;
     transform: translateY(30px);
-    transition: 0.5s all;
+   transition: 0.5s all;
+}
+.card .info h2{
+    text-align: center;
+    line-height: 3;
+    font-size: 21px;
+}
+.card .info p{
+    line-height: 1.2;
+    text-align: justify;
 }
 
-
-.carta:hover .info{
+.card:hover .info{
     opacity: 1;
     transform: translateY(0px);
 }
-/*INICIO | Estlios de los retos y desafios*/
+
+@media(max-width: 960px){
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 560px){
+    .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/*FIN | EStilos de la sección retos y desafios del ODS 06*/
 
 
 
-/*INICIO | Estilos de la seccion Proyectos exitosos*/
-.titulo_proyectos_exitososODS06{
-    margin-top: 80px;
+/*INICIO | Estilos de la sección proyectos exitosos del ODS 06*/
+.titulo_seccion{
+    margin-top: 20px;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     color: white;
 }
 
-
-.img_banner{
-    margin-top: -90px;
-    height: 70vh;
+.section_proyectos{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url(/img/conservacion.jpg);
+            rgba(0, 0, 0, 0.5)), url(/img/banner_proyectos.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
     background-position: center center;
 }
 
-.container_cartas_Exitos{
+.container_proyectos {
     display: grid;
     place-items: center;
     margin-inline: 1.5rem;
-    padding-block: 5rem;
+    padding-block: 6rem;
 }
 
-.carta_contenedor{
+.card_container {
     display: grid;
     row-gap: 3.5rem;
 }
 
-.carta_article{
+.card_article {
     position: relative;
     overflow: hidden;
 }
 
-.carta_article img{
-    width: 328px;
-    border-radius: 15px;
+.card_img {
+    width: 320px;
+    border-radius: 1.5rem;
 }
 
-.cartas_datos{
-    width: 200px;
-    background-color: white;
+.card_data {
+    width: 289px;
+    background-color: rgb(239, 239, 239);
     padding: 1.5rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
     position: absolute;
     bottom: -9rem;
     left: 0;
-    right: 0;
+    right: 0;   
     margin-inline: auto;
-    opacity: 0; 
-    transition: opacity 1s 1s ;
+    opacity: 0;
+    transition: opacity 1s 1s;
 }
 
-.cartas_datos h3{
-    color: black;
-    font-size: 15px;
+.card_title {
+    font-size: 19px;
     text-align: center;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: .75rem;
+    border-bottom: 2px solid #056c92;
+    line-height: 1.3;
 }
 
-.cartas_datos button{
-    border: 1px solid;
-    padding: 9px;
-    background-color: white;
-    color: #0FAFD0;
-    border-radius: 15px;
-    margin-left: 80px;
+.card_info{
+    text-align: justify;
+    line-height: 1.3;
+    font-size: 13px;
+    font-weight: 500;
 }
 
-.descripcion_carta{
-    display: block;
-    font-size: 20px;
-    margin-bottom: .25rem;
+
+.card_article:hover .card_data{
+animation: show-data 1s forwards;
+opacity: 1;
+transition: opacity .3s;
 }
 
-.carta_article:hover .cartas_datos{
-    animation: show-data 1s forwards;
-    opacity: 1;
-    transition: opacity .3s; 
-} 
-
-.carta_article:hover{
-    animation: remove-overflow 2s forwards;
-} 
-
-.carta_article:not(:hover){
-  animation: show-overflow 2s forwards;
+.card_article:hover{
+  animation: remove-overflow 2s forwards;
 }
 
-.carta_article:not(:hover) .cartas_datos{
+.card_article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card_article:not(:hover) .card_data{
     animation: remove-data 1s forwards;
-  }
+}
 
 
-@keyframes show-data{
+
+@keyframes show-data {
     50%{
         transform: translateY(-10rem);
     }
     100%{
         transform: translateY(-7rem);
-    } 
+    }
 }
 
-@keyframes remove-overflow{
+@keyframes remove-overflow {
     to{
         overflow: initial;
     }
 }
 
-
-@keyframes remove-data{
+@keyframes remove-data  {
     0%{
         transform: translateY(-7rem);
     }
     50%{
-        transform: translateY(-10rem);
+        transform: translateY(-10rem) ;
     }
     100%{
         transform: translateY(.5rem);
     }
 }
 
-
-@keyframes show-overflow{
+@keyframes show-overflow {
     0%{
         overflow: initial;
         pointer-events: none;
@@ -558,31 +630,37 @@ section .wave.wave3{
     }
 }
 
-@media screen and (min-width: 1120px){
-    .container_cartas_Exitos{
-        height: 50vh;
-    }
 
-    .carta_contenedor{
-       grid-template-columns: repeat(3, 1fr);
+@media screen and (max-width: 345px){
+    .container_proyectos{
+        margin-inline: 1rem;
     }
-    
-    .carta_article img{
-        width:  340px;
+    .card_data{
+        width: 250px;
+        padding: 1rem;
     }
-
-    .carta_article{
-        margin-left: 40px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cartas_datos{
-        width: 316px;
-        padding-inline: 2.5rem;
+    .card_img {
+        width: 310px;
     }
 }
-/*FIN | Estilos de la seccion Proyectos exitosos*/
+
+@media screen and (min-width: 768px){
+    .card_container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px){
+    
+    .card_img {
+        width: 510px;
+    }
+    .card_data{
+        width: 400px;
+    }
+}
+/*FIN | Estilos de la sección proyectos exitosos del ODS 06*/
 
 /*INICIO | Estilos de la seccion contribuir*/
 .acciones_contribuirODS06{
