@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" href="/img/ONU.ico">
+    <link rel="icon" href="/icon/Logo_ods06.ico">
 
 <body>
     
@@ -33,9 +33,9 @@
         <div class="navegacion_links">
             <a href="#">INICIO</a>
             <a href="ExploraODS06.html">ODS06</a>
-            <a href="#">AUDIOVISULA</a>
-            <a href="#">CONTRIBUYE</a>
-            <a href="/contactanos.html">CONTACTANOS</a>
+            <a href="audiovisual.html">AUDIOVISUAL</a>
+            <a href="quienesSomos.html">¿QUIENES SOMOS?</a>
+            <a href="contactanos.html">CONTACTANOS</a>
         </div>
     </div>
 </header>
@@ -43,13 +43,82 @@
 
   <!--Inicio | Banner principal de la pagina-->
 <section class="home">
-    <video src="/img/video-principalODS06.mp4" autoplay muted loop></video>
+    <video src="/video/video-principalODS06.mp4" autoplay muted loop></video>
     <div class="contenido">
         <h1>Transformar nuestro mundo<br> <span>|ODS 06|</span></h1>
         <a href="#">Explora</a>
     </div>
 </section>
 
+<script>
+    $(document).ready(function() {
+        const fechasCivicasContainer = $('#fechas-civicas-list');
+
+        // Datos simulados de fechas cívicas
+        const fechasCivicas = [
+            {
+                fecha: '2024-11-01',
+                nombre_celebracion: 'Día de Todos los Santos',
+                tipo: 'Cívico',
+                responsable: 'Gobierno Local',
+                descripcion: 'Celebración en honor a todos los santos.'
+            },
+            {
+                fecha: '2024-12-08',
+                nombre_celebracion: 'Inmaculada Concepción',
+                tipo: 'Religioso',
+                responsable: 'Iglesia Católica',
+                descripcion: 'Fiesta en honor a la Virgen María.'
+            }
+        ];
+
+        // Función para cargar las fechas cívicas
+        function cargarFechasCivicas() {
+            fechasCivicasContainer.empty(); // Limpiar el contenido anterior
+
+            if (fechasCivicas.length > 0) {
+                // Hay fechas cívicas
+                fechasCivicas.forEach(fecha => {
+                    const fechaCivica = new Date(fecha.fecha);
+                    const fechaFormateada = fechaCivica.toLocaleDateString('es-PE', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    const fechaElement = $('<div>').append(
+                        $('<p>').html(
+                            `Hoy ${fechaFormateada} es:`
+                        ),
+                        // Agrega un contenedor para la descripción y un botón "Ver más"
+                        $('<div>').addClass('descripcion-container').append(
+                            $('<p>').html(`<strong>Nombre de la celebración:</strong> ${fecha.nombre_celebracion}`),
+                            $('<p>').html(`<strong>Tipo:</strong> ${fecha.tipo}`),
+                            $('<p>').html(`<strong>Responsable:</strong> ${fecha.responsable}`),
+                            $('<p>').html(`<strong>Descripción:</strong> ${fecha.descripcion}`).hide(),
+                            $('<button>').text('Ver más').addClass('ver-mas-btn')
+                        )
+                    );
+
+                    // Agrega el evento click al botón "Ver más"
+                    fechaElement.find('.ver-mas-btn').on('click', function() {
+                        // Muestra la descripción al hacer clic en "Ver más"
+                        fechaElement.find('.descripcion-container p').toggle();
+                    });
+
+                    fechasCivicasContainer.append(fechaElement);
+                });
+            } else {
+                // No hay fechas cívicas
+                const mensajeElement = $('<p>').text('No hay fechas cívicas futuras.');
+                fechasCivicasContainer.append(mensajeElement);
+            }
+        }
+
+        cargarFechasCivicas(); // Cargar las fechas cívicas al cargar la página
+    });
+</script>
 <div class="Segmento2">
     <div class="titulo_queSonLosODS">
         <h2>¿Qué son los ODS?</h2>

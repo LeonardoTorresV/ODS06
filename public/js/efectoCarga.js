@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         hideLoader();
-    }, 3000);
+    }, 1000);
 })
 
 const loader = document.getElementById("loaderCharge");
