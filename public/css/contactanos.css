@@ -610,11 +610,16 @@ button:hover {
     width: 100%;
 }
 
+.contenido h1 {
+    font-size: 3em;
+    margin: auto;
+}
 
 .containerIntegrantes {
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto;
     clear: both;
+    
 }
 
 .members {
