@@ -7,14 +7,14 @@
     <title>ODS Agua limpia y Saneamiento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/css/contactanos.css">
-    <script src="/js/donaciones.js"></script>
-    <link rel="icon" href="/icon/Logo_ods06.ico">
+    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="icon" href="icon/Logo_ods06.ico">
 
 <body>
-    <!--Inicio | Header de la pagina con menu de navegacion-->
-    <header>
-        <a href="#" class="logo"> <img src="/img/LOGO_ODS _06_sinFondo.png" alt="logo eco lluvia solutions"></a>
+      <!--Inicio | Header de la pagina con menu de navegacion-->
+<header>
+    <nav class="nav">
+        <a href="#" class="logo"> <img src="img/LOGO_ODS _06_sinFondo.png" alt="logo eco lluvia solutions"></a>
         <p class="fecha">Fecha de hoy: <span id="fechaActual"></span></p>
         <div class="menu_btn"></div>
         <div class="navegacion">
@@ -23,12 +23,14 @@
                 <a href="ExploraODS06.html">ODS06</a>
                 <a href="audiovisual.html">AUDIOVISUAL</a>
                 <a href="quienesSomos.html">¿QUIENES SOMOS?</a>
-                <a href="#">CONTACTANOS</a>
+                <a href="contactanos.html">CONTACTANOS</a>
             </div>
         </div>
-    </header>
-    <script src="js/index.js"></script>
-    <!--Fin | Header de la pagina con menu de navegacion-->
+    </nav>
+</header>
+<script src="js/menuStatico.js"></script>
+<script src="js/index.js"></script>
+<!--Fin | Header de la pagina con menu de navegacion-->
 
 
     <!--INICIO| EStructura para el efcto carga de la pagina-->
@@ -40,12 +42,12 @@
             </div>
         </div>
     </div>
-    <script src="/js/efectoCarga.js"></script>
+    <script src="js/efectoCarga.js"></script>
     <!--FIN | Estructura para el efecto carga de la pagina-->
 
     <div class="main-container">
         <section class="partners">
-            <video src="/video/video-partners.mp4" autoplay muted loop></video>
+            <video src="video/video-partners.mp4" autoplay muted loop></video>
             <div class="contenido">
                 <h1>Contactanos<br></h1>
             </div>
@@ -93,79 +95,170 @@
             </div>
         </div>
 
-        <div class="containerSuggestionForm">
-            <h1>Dejanos tu sugerencia para seguir creciendo</h1>
-            <form id="suggestionForm">
-                <textarea id="suggestion" name="suggestion" required></textarea>
-                <button type="submit">Enviar Sugerencia</button>
-            </form>
-            <p class="success-message" id="successMessage">¡Gracias por tu sugerencia! La hemos recibido correctamente.
-            </p>
-        </div>
-        <div class="main-container">
-            <div class="bodyDonaciones">
-                <div class="card-form">
-                    <form class="deposit">
-                        <div class="form-indicator"></div>
-                        <div class="form-body">
-                            <div class="row">
-                                <h2>PUEDES AYUDAR DONANDO:</h2>
+            <!--INICIO | Formulario de donaciones -->
+            <div class="content_general">
+                <div class="container_formulario">
+                    <h2>Contribuye con una donanción</h2>
+                    <form id="donationForm">
+                        <!-- Información del donante -->
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error" id="nameError"></div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error" id="emailError"></div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="celphone">Teléfono</label>
+                            <input type="text" id="cellphone" name="cellphone" required>
+                            <div class="error" id="cellphoneError"></div>
+                        </div>
+    
+                        <!-- Monto de la donación con botones -->
+                        <div class="form-group">
+                            <label for="amount">Monto de la donación</label>
+                            <div class="amount-buttons" id="amountButtons">
+                                <button type="button" class="amount-button" data-amount="10">$10</button>
+                                <button type="button" class="amount-button" data-amount="20">$20</button>
+                                <button type="button" class="amount-button" data-amount="50">$50</button>
+                                <button type="button" class="amount-button" data-amount="100">$100</button>
+                                <button type="button" class="amount-button" data-amount="200">$200</button>
+                                <button type="button" class="amount-button" data-amount="500">$500</button>
+                                <button type="button" class="amount-button" data-amount="1000">$1000</button>
                             </div>
-                            <div class="row">
-                                <p style="margin-top:0px;" id="donation">S/0 recibidos las últimas 24 horas</p>
+                            <input type="hidden" id="amount" name="amount" required>
+                            <div class="error" id="amountError"></div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="descripcion">Deja un bonito comentario o una sugerencia</label>
+                            <textarea id="descripcion" name="descripcion" maxlength="300"></textarea>
+                        </div>
+    
+                        <!-- Información de la tarjeta -->
+                        <h3>Información de la tarjeta</h3>
+                        <div class="card-info-row">
+                            <div class="form-group">
+                                <label for="card_type">Tipo de tarjeta</label>
+                                <select id="card_type" name="card_type" required>
+                                    <option value="">Seleccione un tipo</option>
+                                    <option value="Debito">Debito</option>
+                                    <option value="Credito">Crédito</option>
+                                </select>
+                                <div class="error" id="cardTypeError"></div>
                             </div>
-                            <div class="row">
-                                <div class="form-block">
-                                    <div class="button" id="1" onclick="setValue(this)">S/5</div>
-                                    <div class="button" id="2" onclick="setValue(this)">S/10</div>
-                                    <div class="button" id="3" onclick="setValue(this)">S/20</div>
-                                    <div class="button" id="4" onclick="setValue(this)">S/40</div>
-                                    <div class="button" id="5" onclick="setValue(this)">S/100</div>
-                                    <div class="button" id="6" onclick="setValue(this)">S/250</div>
-                                    <div class="button" id="7" onclick="setValue(this)">S/1000</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <input type="text" id="cc" maxlength="16" placeholder="Número de tarjeta">
-                            </div>
-                            <div class="row">
-                                <input type="text" id="date" maxlength="5" placeholder="MM/YY">
-                                <input type="text" id="cvc" maxlength="4" placeholder="CVC">
-                            </div>
-                            <div class="row">
-                                <input type="text" id="name" placeholder="Deja un bonito mensaje">
+    
+                            <div class="form-group">
+                                <label for="card_number">Número de tarjeta</label>
+                                <input type="text" id="card_number" name="card_number" required>
+                                <div class="error" id="cardNumberError"></div>
                             </div>
                         </div>
-                        <div class="form-footer">
-                            <div class="btn" onclick="validate(this)">Realizar Donación</button>
+    
+                        <div class="card-info-row">
+                            <div class="form-group">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" name="cvc" required>
+                                <div class="error" id="cvcError"></div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="expiration_date">Fecha de expiración</label>
+                                <input type="text" id="expiration_date" name="expiration_date" placeholder="MM/YY" required>
+                                <div class="error" id="expirationDateError"></div>
                             </div>
                         </div>
+    
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Acepto los términos y condiciones</label>
+    
+    
+                        <button type="submit">Enviar Donación</button>
                     </form>
                 </div>
             </div>
+            <script src="js/validacionesForm.js"></script>
+            <script src="js/fetchForm.js"></script>
+            <!--Archivo cnd para usar sweetalert-->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <!--FIN | Formulario de donaciones -->
+          <!--INICIO | Estructura de la sección desarrolladores de la pagina-->
+          
+    <div class="title_developers">
+        <h2>Equipo de Desarrollo</h2>
+    </div>
+    <div class="container_developers">
+        <div class="card_developers">
+            <div class="content_developers">
+                <span></span>
+                <div class="image_developers">
+                    <img src="img/persona.jpg" alt="">
+                </div>
+                <h4>Jesus Sánchez</h4>
+                <h6>Web Designer</h6>
+                <p>Desarrollador web Junior con conocimiento medio en lenguajes como HTML, Css Y JavaScript.</p>
+            </div>
+            <div class="links_developers">
+             <a href="https://www.facebook.com/share/1Cd6BhHXzF/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.tiktok.com/@nautilus_delta?_t=8rQFlSv9hEW&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+             <a href="https://github.com/JesusSanchezMiranda" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
-        <div class="containerIntegrantes">
-            <h1>EQUIPO DE PROYECTO</h1>
-            <div class="members">
-                <div class="member">
-                    <img
-                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033344/itc-web-course-flexbox/richard.png">
-                    <h2 class="member-name">Rivas Rojas Luis Alexander</h2>
+
+        <div class="card_developers">
+            <div class="content_developers">
+                <span></span>
+                <div class="image_developers">
+                    <img src="img/persona.jpg" alt="">
                 </div>
-                <div class="member">
-                    <img
-                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033285/itc-web-course-flexbox/dinesh.png">
-                    <h2 class="member-name">Sanchez Miranda Jesus Miguel</h2>
+                <h4>Luis Rivas</h4>
+                <h6>Web Designer</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, natus!</p>
+            </div>
+            <div class="links_developers">
+             <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+
+        <div class="card_developers">
+            <div class="content_developers">
+                <span></span>
+                <div class="image_developers">
+                    <img src="img/persona.jpg" alt="">
                 </div>
-                <div class="member">
-                    <img
-                        src="https://res.cloudinary.com/mlshv/image/upload/v1544033357/itc-web-course-flexbox/gilfoyle.png">
-                    <h2 class="member-name">Torres Vicente Leonardo</h2>
-                </div>
+                <h4>Leonardo Torres</h4>
+                <h6>Web Designer</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, natus!</p>
+            </div>
+            <div class="links_developers">
+             <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+             <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </div>
+      <!--FIN | Estructura de la sección desarrolladores de la pagina-->
+
+
+      <!-- INICIO | Estructura efecto boton de retorno navegacion-->
+      <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
     </div>
+    <script src="js/botonRetorno.js"></script>
+    <!-- FIN | Estructura efecto boton de retorno navegacion-->
 
     <!--INICIO | Footer de ka pagina-->
 
@@ -173,19 +266,19 @@
         <div class="grupo_1">
             <div class="box">
                 <figure>
-                    <img src="/img/logo_ecolluviaSolution_blanco.png" alt="">
+                    <img src="img/logo_ecolluviaSolution_blanco.png" alt="">
                 </figure>
             </div>
             <div class="box">
                 <h3>Contactanos</h3>
                 <a href="#"><i class="fa-solid fa-location-dot"></i>2 de Mayo 437-247. Imperial 15701</a>
                 <a href="#"><i class="fa-solid fa-phone-volume"></i>+51 923 463 263</a>
-                <a href="#"><i class="fa-solid fa-envelope"></i>Example@gmail.com</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>ecolluviasolutions@gmail.com</a>
             </div>
             <div class="box">
                 <h3>Links Rapidos</h3>
-                <a href=""><i class="fa-solid fa-chevron-right"></i>Equipo de desarrollo</a>
-                <a href=""><i class="fa-solid fa-chevron-right"></i>Registrate</a>
+                <a href="contactanos.html"><i class="fa-solid fa-chevron-right"></i>Equipo de desarrollo</a>
+                <a href="contactanos.html"><i class="fa-solid fa-chevron-right"></i>Donacion</a>
             </div>
             <div class="box_links">
                 <h3>Siguenos en Nuestras redes</h3>

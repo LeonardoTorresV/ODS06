@@ -7,8 +7,8 @@
     <title>ODS Agua limpia y Saneamiento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" href="/icon/Logo_ods06.ico">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="icon/Logo_ods06.ico">
 
 <body>
     
@@ -22,34 +22,38 @@
             </div>
         </div>
     </div>
-    <script src="/js/efectoCarga.js"></script>
+    <script src="js/efectoCarga.js"></script>
     <!--FIN | Estructura para el efecto carga de la pagina-->
 
-   <!--Inicio | Header de la pagina con menu de navegacion-->
-   <header>   
-    <a href="#" class="logo"> <img src="/img/LOGO_ODS _06_sinFondo.png" alt="logo eco lluvia solutions"></a>
-    <p class="fechaActual">Fecha de hoy: <span id="fechaActual"></span></p>
-    <div class="menu_btn"></div>
-    <div class="navegacion">
-        <div class="navegacion_links">
-            <a href="#">INICIO</a>
-            <a href="ExploraODS06.html">ODS06</a>
-            <a href="audiovisual.html">AUDIOVISUAL</a>
-            <a href="quienesSomos.html">¿QUIENES SOMOS?</a>
-            <a href="contactanos.html">CONTACTANOS</a>
+<!--Inicio | Header de la pagina con menu de navegacion-->
+<header>
+    <nav class="nav">
+        <a href="#" class="logo"> <img src="img/LOGO_ODS _06_sinFondo.png" alt="logo eco lluvia solutions"></a>
+        <p class="fecha">Fecha de hoy: <span id="fechaActual"></span></p>
+        <div class="menu_btn"></div>
+        <div class="navegacion">
+            <div class="navegacion_links">
+                <a href="index.html">INICIO</a>
+                <a href="ExploraODS06.html">ODS06</a>
+                <a href="audiovisual.html">AUDIOVISUAL</a>
+                <a href="quienesSomos.html">¿QUIENES SOMOS?</a>
+                <a href="contactanos.html">CONTACTANOS</a>
+            </div>
         </div>
-    </div>
+    </nav>
 </header>
- <!--Fin | Header de la pagina con menu de navegacion-->
+<script src="js/menuStatico.js"></script>
+<!--Fin | Header de la pagina con menu de navegacion-->
 
   <!--Inicio | Banner principal de la pagina-->
 <section class="home">
-    <video src="/video/video-principalODS06.mp4" autoplay muted loop></video>
+    <video src="video/video-principalODS06.mp4" autoplay muted loop></video>
     <div class="contenido">
         <h1>Transformar nuestro mundo<br> <span>|ODS 06|</span></h1>
-        <a href="#">Explora</a>
+        <a href="#Que_sonLosODS">Explora</a>
     </div>
 </section>
+<!--FIN | Banner principal de la pagina-->
 
 <script>
     $(document).ready(function() {
@@ -120,25 +124,30 @@
         cargarFechasCivicas(); // Cargar las fechas cívicas al cargar la página
     });
 </script>
-<div class="Segmento2">
-    <div class="titulo_queSonLosODS">
-        <h2>¿Qué son los ODS?</h2>
+
+<div id="Que_sonLosODS">
+    <div class="Segmento2">
+        <div class="titulo_queSonLosODS">
+            <h2>¿Qué son los ODS?</h2>
     </div>
     <div class="contenedor_queSonODS">
         <div class="img_queSon">
-            <img src="/img/3que-son-ODS.jpg" alt="Imagen de que son los ODS">
+            <img src="img/3que-son-ODS.jpg" alt="Imagen de que son los ODS">
         </div>
         <div class="texto_queSon">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat distinctio sint facere ad eos iste
-                praesentium repudiandae inventore itaque culpa dolores corporis iusto, commodi voluptatum
-                consequuntur illo, numquam natus beatae autem sapiente obcaecati tempore. Hic dolores laudantium
-                quasi modi qui voluptate autem asperiores, fugiat dicta ut temporibus quia porro natus commodi,
-                incidunt alias sunt aliquam magni error expedita molestias excepturi!</p>
+            <p>Los Objetivos de Desarrollo Sostenible (ODS), también conocidos como Objetivos Globales, fueron adoptados por las
+            Naciones Unidas en 2015 como un llamamiento universal para poner fin a la pobreza, proteger el planeta y garantizar que
+            para el 2030 todas las personas disfruten de paz y prosperidad.</p>
+            <br>
+            <p>Los 17 ODS están integrados: reconocen que la acción en un área afectará los resultados en otras áreas y que el
+                desarrollo debe equilibrar la sostenibilidad social, económica y ambiental. Los países se han comprometido a
+                priorizar el progreso de los más rezagados.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<script src="/js/index.js"></script>
+<script src="js/index.js"></script>
  <!--Fin | Banner principal de la pagina-->
 
 
@@ -147,7 +156,7 @@
    <div class="titulo_ODS">
     <h2 >Los 17 ODS</h2>
  <div class="gif_ODS">
-     <img src="/img/gif-ods.gif" alt="">
+     <img src="img/gif-ods.gif" alt="">
  </div>
 </div>
 
@@ -155,7 +164,7 @@
  <div class="fila">
      <div class="carta">
          <div class="face front">
-             <img src="/img/fin-pobreza.jpg" alt="">
+             <img src="img/fin-pobreza.jpg" alt="">
              <h3 class="title_ODS1">Fin de la <br> pobreza<i class="fa-solid fa-people-roof"></i></h3>
          </div>
          <div class="face back">
@@ -169,7 +178,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/hambre-ceo.jpg" alt="">
+             <img src="img/hambre-ceo.jpg" alt="">
              <h3 class="title_ODS2">Hambre <br> cero<i class="fa-solid fa-plate-wheat"></i></h3>
          </div>
          <div class="face back">
@@ -184,7 +193,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/salud.jpg" alt="">
+             <img src="img/salud.jpg" alt="">
              <h3 class="title_ODS3">Salud y <br> bienestar<i class="fa-solid fa-heart-pulse"></i></h3>
          </div>
          <div class="face back">
@@ -201,7 +210,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/educacion-calidad.jpg" alt="">
+             <img src="img/educacion-calidad.jpg" alt="">
              <h3 class="title_ODS4">Educación de <br> calidad<i class="fa-solid fa-book"></i></h3>
          </div>
          <div class="face back">
@@ -222,7 +231,7 @@
  <div class="fila">
      <div class="carta">
          <div class="face front">
-             <img src="/img/igualdad-genero.jpg" alt="">
+             <img src="img/igualdad-genero.jpg" alt="">
              <h3 class="title_ODS5">Igualdad de <br> genero<i class="fa-solid fa-venus-mars"></i></h3>
          </div>
          <div class="face back">
@@ -236,7 +245,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/agua.jpg" alt="">
+             <img src="img/agua.jpg" alt="">
              <h3 class="title_ODS6">Agua limpia y <br> Saneamiento<i class="fa-solid fa-droplet"></i></h3>
          </div>
          <div class="face back">
@@ -251,7 +260,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/energia.jpg" alt="">
+             <img src="img/energia.jpg" alt="">
              <h3 class="title_ODS7">Energia acequible y <br>no contaminante<i class="fa-solid fa-sun-plant-wilt"></i></h3>
          </div>
          <div class="face back">
@@ -271,7 +280,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/trabajo.jpg" alt="">
+             <img src="img/trabajo.jpg" alt="">
              <h3 class="title_ODS8">Tabajo decente y crecimiento economico<i class="fa-solid fa-chart-line"></i></h3>
          </div>
          <div class="face back">
@@ -291,7 +300,7 @@
  <div class="fila">
      <div class="carta">
          <div class="face front">
-             <img src="/img/industria.jpg" alt="">
+             <img src="img/industria.jpg" alt="">
              <h3 class="title_ODS9">Industria, Innovacion e <br> infraestructura<i class="fa-solid fa-cubes"></i></h3>
          </div>
          <div class="face back">
@@ -306,7 +315,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/reduccion-desigualdades.jpg" alt="">
+             <img src="img/reduccion-desigualdades.jpg" alt="">
              <h3 class="title_ODS10">Reduccion de las <br> desigualdades<i class="fa-solid fa-equals"></i></h3>
          </div>
          <div class="face back">
@@ -322,7 +331,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/ciudades.jpg" alt="">
+             <img src="img/ciudades.jpg" alt="">
              <h3 class="title_ODS11">Ciudades y Comunidades <br>sostenibles<i class="fa-solid fa-sun-plant-wilt"></i></h3>
          </div>
          <div class="face back">
@@ -337,7 +346,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/consumo-responsable.jpg" alt="">
+             <img src="img/consumo-responsable.jpg" alt="">
              <h3 class="title_ODS12">Produccion y comsumo <br>responsable<i class="fa-solid fa-chart-line"></i></h3>
          </div>
          <div class="face back">
@@ -359,7 +368,7 @@
  <div class="fila">
      <div class="carta">
          <div class="face front">
-             <img src="/img/acciones-clima.jpeg" alt="">
+             <img src="img/acciones-clima.jpeg" alt="">
              <h3 class="title_ODS13">Acciones por <br> el clima<i class="fa-solid fa-cloud"></i></h3>
          </div>
          <div class="face back">
@@ -374,7 +383,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/vida-submarina.jpg" alt="">
+             <img src="img/vida-submarina.jpg" alt="">
              <h3 class="title_ODS14">Vida <br> Submarina<i class="fa-solid fa-fish-fins"></i></h3>
          </div>
          <div class="face back">
@@ -389,7 +398,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/vida-terrestre.png" alt="">
+             <img src="img/vida-terrestre.png" alt="">
              <h3 class="title_ODS15">Vida de ecosistemas <br>terrestres<i class="fa-solid fa-tree"></i></h3>
          </div>
          <div class="face back">
@@ -406,7 +415,7 @@
 
      <div class="carta">
          <div class="face front">
-             <img src="/img/paz-justicia.jpg" alt="">
+             <img src="img/paz-justicia.jpg" alt="">
              <h3 class="title_ODS16">Paz, justicia e <br> instituciones solidas<i class="fa-solid fa-dove"></i></h3>
          </div>
          <div class="face back">
@@ -426,7 +435,7 @@
  <div class="fila">
      <div class="carta">
          <div class="face front">
-             <img src="/img/alianzas.jpg" alt="">
+             <img src="img/alianzas.jpg" alt="">
              <h3 class="title_ODS17">Alianzas para lograr <br>los objetivos<i class="fa-solid fa-earth-asia"></i></h3>
          </div>
          <div class="face back">
@@ -442,7 +451,6 @@
  </div>
  <!--Fin de la seccion ODS 17-->
 <!--Fin | Los 17 oDS-->
-        <script src="index.js"></script>
 
         <!--INiCIO SECIION HSITORIA DE LOS ODS-->
 
@@ -515,7 +523,7 @@
     <div class="contenedor_general">
         <div class="slide_container">
             <div class="slides active">
-                <img src="/img/desarrollo-sostenible.jpg" alt="imagen slide 1">
+                <img src="img/desarrollo-sostenible.jpg" alt="imagen slide 1">
                 <div class="text">
                     <h3>Desarrollo Integral</h3>
                     <p>Los ODS abordan de manera holística los desafíos sociales, económicos y ambientales, promoviendo
@@ -524,7 +532,7 @@
                 </div>
             </div>
             <div class="slides">
-                <img src="/img/inovacion-crecimiento-economico.jpg" alt="imagen slide 1">
+                <img src="img/inovacion-crecimiento-economico.jpg" alt="imagen slide 1">
                 <div class="text">
                     <h3>Crecimiento Economico</h3>
                     <p>los ODS buscan mejorar las condiciones de vida y garantizar que todas las personas tengan acceso
@@ -533,7 +541,7 @@
                 </div>
             </div>
             <div class="slides">
-                <img src="/img/calidad-vida.jpg" alt="imagen slide 1">
+                <img src="img/calidad-vida.jpg" alt="imagen slide 1">
                 <div class="text">
                     <h3>Mejora de la calidad de Vida</h3>
                     <p>Algunos ODS están dedicados a promover sociedades pacíficas e inclusivas, lo cual es fundamental
@@ -542,7 +550,7 @@
                 </div>
             </div>
             <div class="slides">
-                <img src="/img/paz-justicia.png" alt="imagen slide 1">
+                <img src="img/paz-justicia.png" alt="imagen slide 1">
                 <div class="text">
                     <h3>Fomento de la paz y la Justicia</h3>
                     <p>Los ODS impulsan la innovación y el desarrollo de tecnologías sostenibles, lo que puede estimular
@@ -551,7 +559,7 @@
                 </div>
             </div>
             <div class="slides">
-                <img src="/img/responsalididad-compartida.png" alt="imagen slide 1">
+                <img src="img/responsalididad-compartida.png" alt="imagen slide 1">
                 <div class="text">
                     <h3>Responsabilidad compartida</h3>
                     <p>Al establecer metas claras, los ODS fomentan la colaboración entre gobiernos, sector privado y
@@ -572,13 +580,14 @@
    <!--FIN | Importancia de los ODS-->
 
 
-        <!--efecto boton de retorno navegacion-->
+        <!-- INICIO | Estructura efecto boton de retorno navegacion-->
         <div class="go-top-container">
             <div class="go-top-button">
                 <i class="fas fa-chevron-up"></i>
             </div>
         </div>
-        <script src="/js/botonRetorno.js"></script>
+        <script src="js/botonRetorno.js"></script>
+        <!-- FIN | Estructura efecto boton de retorno navegacion-->
 
 
    <!--INICIO | Footer de ka pagina-->
@@ -587,19 +596,19 @@
     <div class="grupo_1">
         <div class="box">
             <figure>
-                <img src="/img/logo_ecolluviaSolution_blanco.png" alt="">
+                <img src="img/logo_ecolluviaSolution_blanco.png" alt="">
             </figure>
         </div>
         <div class="box">
             <h3>Contactanos</h3>
             <a href="#"><i class="fa-solid fa-location-dot"></i>2 de Mayo 437-247. Imperial 15701</a>
             <a href="#"><i class="fa-solid fa-phone-volume"></i>+51 923 463 263</a>
-            <a href="#"><i class="fa-solid fa-envelope"></i>Example@gmail.com</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>ecolluviasolutions@gmail.com</a>
         </div>
         <div class="box">
             <h3>Links Rapidos</h3>
-            <a href=""><i class="fa-solid fa-chevron-right"></i>Equipo de desarrollo</a>
-            <a href=""><i class="fa-solid fa-chevron-right"></i>Registrate</a>
+            <a href="contactanos.html"><i class="fa-solid fa-chevron-right"></i>Equipo de desarrollo</a>
+            <a href="contactanos.html"><i class="fa-solid fa-chevron-right"></i>Donacion</a>
         </div>
         <div class="box_links">
             <h3>Siguenos en Nuestras redes</h3>
