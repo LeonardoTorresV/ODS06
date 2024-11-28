@@ -16,17 +16,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuración de conexiones a bases de datos
 const dbCalendario = mysql.createConnection({
-    host: 'dbfechas.cruk2moews08.us-east-1.rds.amazonaws.com',
+    host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
     port: 3306,
     user: 'admin',
-    password: 'esunestres',
+    password: 'LeoTorres625',
     database: 'calendario',
 });
 
 const dbDonaciones = mysql.createPool({
-    host: 'dbfechas.cruk2moews08.us-east-1.rds.amazonaws.com',
+    host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
     user: 'admin',
-    password: 'esunestres',
+    password: 'LeoTorres625',
     database: 'DB_donacionesODS06',
     port: 3306,
 }).promise();
