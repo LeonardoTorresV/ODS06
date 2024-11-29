@@ -111,5 +111,5 @@ app.get('/', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://98.82.40.249/:${PORT}`); // cambiar el locallhost por tu ip
+    console.log(`Servidor corriendo en http://98.82.40.249:${PORT}`); // cambiar el locallhost por tu ip
 });
