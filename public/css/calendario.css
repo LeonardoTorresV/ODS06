@@ -6,6 +6,14 @@
   text-align: center;
 }
 
+
+/*Titulo del calendario*/
+#calendar h2{
+  font-size: 2em;
+  color: rgb(1, 61, 81);
+  margin-bottom: 10px;
+}
+
 /* Estilo para el calendario */
 .calendar {
   display: grid;
@@ -84,3 +92,64 @@ button:hover {
   font-size: 16px;
   color: #ccc;
 }
+
+
+/*INICIO | Estilos responisve del calendario*/
+
+/* Pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+  #calendar {
+      max-width: 90%; /* Más ancho en dispositivos pequeños */
+      margin: 20px auto;
+  }
+
+  .calendar {
+      gap: 5px; /* Menor espacio entre elementos */
+  }
+
+  .date {
+      padding: 10px; /* Reducción de tamaño de los días */
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 16px; /* Botones más pequeños */
+      padding: 8px 12px;
+  }
+
+  #monthYear {
+      font-size: 20px; /* Ajuste del tamaño del título */
+  }
+
+  #infoContent {
+      font-size: 14px; /* Texto más pequeño en la información */
+  }
+}
+
+/* Pantallas menores a 480px (móviles pequeños) */
+@media (max-width: 480px) {
+  .calendar {
+      grid-template-columns: repeat(4, 1fr); /* Cambia a 4 columnas */
+  }
+
+  .date {
+      padding: 8px; /* Aún más pequeño */
+      font-size: 12px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 6px 10px;
+  }
+
+  #monthYear {
+      font-size: 18px;
+  }
+
+  #infoContent {
+      font-size: 12px;
+      padding: 10px;
+  }
+}
+
+/*FIN | Estilos responisve del calendario*/
