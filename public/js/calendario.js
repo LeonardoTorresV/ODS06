@@ -5,7 +5,7 @@ const nextMonth = document.getElementById("nextMonth");
 const infoContent = document.getElementById("infoContent");
 
 let currentDate = new Date();
-const apiURL = "http://54.235.239.163:3000/evento"; // Endpoint para obtener el evento de la fecha, colocar la IP de tu instancia en el localhost
+const apiURL = "http://100.26.128.171:3000/evento"; // Endpoint para obtener el evento de la fecha, colocar la IP de tu instancia en el localhost
 
 function renderCalendar() {
     calendarDates.innerHTML = ""; // Limpiar el calendario previo
