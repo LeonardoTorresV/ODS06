@@ -19,14 +19,14 @@ const dbCalendario = mysql.createConnection({
     host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
     port: 3306,
     user: 'admin',
-    password: 'LeoTorres625',
+    password: 'leonardo123',
     database: 'calendario',
 });
 
 const dbDonaciones = mysql.createPool({
     host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
     user: 'admin',
-    password: 'LeoTorres625',
+    password: 'leonardo123',
     database: 'DB_donacionesODS06',
     port: 3306,
 }).promise();
@@ -111,5 +111,5 @@ app.get('/', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://54.175.1.91:${PORT}`); // cambiar el locallhost por tu ip
+    console.log(`Servidor corriendo en http://54.235.239.163:${PORT}`); // cambiar el locallhost por tu ip
 });
