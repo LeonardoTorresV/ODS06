@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuración de conexiones a bases de datos
 const dbCalendario = mysql.createConnection({
-    host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
+    host: 'tests.crqiacsks14a.us-east-1.rds.amazonaws.com',
     port: 3306,
     user: 'admin',
     password: 'leonardo123',
@@ -24,7 +24,7 @@ const dbCalendario = mysql.createConnection({
 });
 
 const dbDonaciones = mysql.createPool({
-    host: 'ods06.crqiacsks14a.us-east-1.rds.amazonaws.com',
+    host: 'tests.crqiacsks14a.us-east-1.rds.amazonaws.com',
     user: 'admin',
     password: 'leonardo123',
     database: 'DB_donacionesODS06',
@@ -111,5 +111,5 @@ app.get('/', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://54.235.239.163:${PORT}`); // cambiar el locallhost por tu ip
+    console.log(`Servidor corriendo en http://100.26.128.171:${PORT}`); // cambiar el locallhost por tu ip
 });
